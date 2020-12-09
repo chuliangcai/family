@@ -12,6 +12,7 @@
         <module>family-spring-redis</module>
         <module>family-spring-jpa</module>
         <module>family-project-reactor</module>
+        <module>family-spring-webflux</module>
     </modules>
 
 

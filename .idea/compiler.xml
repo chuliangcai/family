@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="family-project-reactor" />
+        <module name="family-spring-webflux" />
         <module name="family-spring-redis" />
         <module name="family-spring-jpa" />
       </profile>
@@ -18,6 +19,7 @@
       <module name="family-project-reactor" options="-parameters" />
       <module name="family-spring-jpa" options="-parameters" />
       <module name="family-spring-redis" options="-parameters" />
+      <module name="family-spring-webflux" options="-parameters" />
     </option>
   </component>
 </project>
