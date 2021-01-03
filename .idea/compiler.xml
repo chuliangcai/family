@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="family-project-reactor" />
+        <module name="family-spring-devtools" />
         <module name="family-spring-webflux" />
         <module name="family-spring-redis" />
         <module name="family-spring-jpa" />
@@ -17,6 +18,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="family-project-reactor" options="-parameters" />
+      <module name="family-spring-devtools" options="-parameters" />
       <module name="family-spring-jpa" options="-parameters" />
       <module name="family-spring-redis" options="-parameters" />
       <module name="family-spring-webflux" options="-parameters" />

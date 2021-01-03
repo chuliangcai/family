@@ -13,6 +13,7 @@
         <module>family-spring-jpa</module>
         <module>family-project-reactor</module>
         <module>family-spring-webflux</module>
+        <module>family-spring-devtools</module>
     </modules>
 
 
