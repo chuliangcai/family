@@ -1,4 +1,4 @@
-package com.jike.family.spring.jpa;
+package com.family.spring.jpa;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
