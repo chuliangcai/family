@@ -1,0 +1,1 @@
+insert into account(id,name,address,app) values(1,'aaa','xxxx','hera');

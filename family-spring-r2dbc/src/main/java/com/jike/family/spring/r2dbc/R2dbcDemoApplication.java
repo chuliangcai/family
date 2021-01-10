@@ -1,12 +1,15 @@
 package com.jike.family.spring.r2dbc;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.r2dbc.core.R2dbcEntityTemplate;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.r2dbc.connection.init.ConnectionFactoryInitializer;
+import org.springframework.r2dbc.connection.init.ResourceDatabasePopulator;
 
-import io.r2dbc.spi.ConnectionFactories;
-import io.r2dbc.spi.ConnectionFactory;
+import io.r2dbc.pool.ConnectionPool;
 
+@SpringBootApplication
 public class R2dbcDemoApplication {
 
     public static void main(String[] args) {
@@ -14,8 +17,13 @@ public class R2dbcDemoApplication {
     }
 
     @Bean
-    public R2dbcEntityTemplate r2dbcEntityTemplate() {
-        ConnectionFactory connectionFactory = ConnectionFactories.get("r2dbc:h2:mem:///test?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE");
-        return new R2dbcEntityTemplate(connectionFactory);
+    public ConnectionFactoryInitializer initializer(ConnectionPool connectionFactory) {
+        ConnectionFactoryInitializer initializer = new ConnectionFactoryInitializer();
+        initializer.setConnectionFactory(connectionFactory);
+        ResourceDatabasePopulator resourceDatabasePopulator = new ResourceDatabasePopulator();
+        resourceDatabasePopulator.addScript(new ClassPathResource("schema.sql"));
+        resourceDatabasePopulator.addScript(new ClassPathResource("data.sql"));
+        initializer.setDatabasePopulator(resourceDatabasePopulator);
+        return initializer;
     }
 }
