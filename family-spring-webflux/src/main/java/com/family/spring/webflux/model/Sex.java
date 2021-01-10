@@ -1,4 +1,4 @@
-package com.jike.family.spring.webflux.model;
+package com.family.spring.webflux.model;
 
 public enum Sex {
     /**

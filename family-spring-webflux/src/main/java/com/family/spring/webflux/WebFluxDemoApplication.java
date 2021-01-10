@@ -1,4 +1,4 @@
-package com.jike.family.spring.webflux;
+package com.family.spring.webflux;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

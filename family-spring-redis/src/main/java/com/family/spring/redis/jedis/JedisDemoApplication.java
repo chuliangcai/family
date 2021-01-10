@@ -1,4 +1,4 @@
-package com.jike.family.spring.redis.jedis;
+package com.family.spring.redis.jedis;
 
 import java.util.ArrayList;
 import java.util.List;
