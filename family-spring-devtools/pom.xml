@@ -30,7 +30,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.jike.family.spring.devtools.DevToolsDemoApplication</mainClass>
+                    <mainClass>com.family.spring.devtools.DevToolsDemoApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
