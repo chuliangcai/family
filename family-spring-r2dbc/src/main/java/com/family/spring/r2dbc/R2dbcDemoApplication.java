@@ -1,4 +1,4 @@
-package com.jike.family.spring.r2dbc;
+package com.family.spring.r2dbc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

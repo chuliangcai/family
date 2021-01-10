@@ -1,4 +1,4 @@
-package com.jike.family.spring.r2dbc.domain;
+package com.family.spring.r2dbc.domain;
 
 import org.springframework.data.annotation.Id;
 

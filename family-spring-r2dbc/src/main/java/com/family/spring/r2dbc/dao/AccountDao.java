@@ -1,9 +1,9 @@
-package com.jike.family.spring.r2dbc.dao;
+package com.family.spring.r2dbc.dao;
 
 import org.springframework.data.r2dbc.repository.Query;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 
-import com.jike.family.spring.r2dbc.domain.Account;
+import com.family.spring.r2dbc.domain.Account;
 
 import reactor.core.publisher.Flux;
 
