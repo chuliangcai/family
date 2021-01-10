@@ -14,6 +14,9 @@
         <module>family-project-reactor</module>
         <module>family-spring-webflux</module>
         <module>family-spring-devtools</module>
+        <module>family-netty</module>
+        <module>family-guava</module>
+        <module>family-spring-r2dbc</module>
     </modules>
 
 
