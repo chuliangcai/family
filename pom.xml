@@ -17,6 +17,7 @@
         <module>family-netty</module>
         <module>family-guava</module>
         <module>family-spring-r2dbc</module>
+        <module>family-jackson</module>
     </modules>
 
 

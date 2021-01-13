@@ -13,6 +13,7 @@
         <module name="family-spring-jpa" />
         <module name="family-netty" />
         <module name="family-guava" />
+        <module name="family-jackson" />
         <module name="family-project-reactor" />
         <module name="family-spring-devtools" />
       </profile>
@@ -24,6 +25,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="family-guava" options="-parameters" />
+      <module name="family-jackson" options="-parameters" />
       <module name="family-netty" options="-parameters" />
       <module name="family-project-reactor" options="-parameters" />
       <module name="family-spring-devtools" options="-parameters" />
