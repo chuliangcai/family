@@ -1,6 +1,7 @@
-package com.family.project.reactor.flux;
+package com.family.project.reactor.core.flux;
 
 import java.math.BigDecimal;
+import java.util.Random;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
@@ -11,8 +12,9 @@ import com.google.common.collect.Lists;
 import lombok.Data;
 import lombok.SneakyThrows;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.FluxSink;
 
-public class FluxDemoApplication {
+public class FluxConstructDemoApplication {
 
     private static ObjectMapper objectMapper = new ObjectMapper();
 
@@ -24,7 +26,9 @@ public class FluxDemoApplication {
     public static void main(String[] args) {
         //testCreateFlux();
         //testCombine();
-        testConcat();
+        //testConcat();
+        //testCreateFlux();
+        testGenerateFlux();
         //testFromIterable();
         //testFluxArray();
         //testFluxEmpty
@@ -32,28 +36,63 @@ public class FluxDemoApplication {
     }
 
     /**
-     * 创建flux
+     * 异步多线程的方式发布事件
      */
     public static void testCreateFlux() {
+        //generate
+        //create or push
+        //push
+        //通过FluxSink API，以同步或者异步方式创建Flux
+        //FluxSink.OverflowStrategy.LATEST
+        Thread thread = new Thread();
+        Flux flux = Flux.<String>create((emitter) -> {
 
-        //Flux.concat()
+            while (true) {
+                emitter.next(new Random().nextLong() + Thread.currentThread().getName());
+            }
 
-        //Flux.combineLatest()
-        //<image src="https://projectreactor.io/docs/core/release/api/reactor/core/publisher/doc-files/marbles/fromForFlux.svg"/>
-        //Flux.from(Publisher)
-
-        //zip
-        //merge
-        //using try-with-resource
+        }, FluxSink.OverflowStrategy.LATEST);
+        flux.subscribe((s) -> {
+            System.out.println(s);
+        });
     }
 
     /**
-     * 编程的方式创建flux
+     * 同步的一对一的发布事件
      */
-    public static void testProgrammaticallyCreateFlux() {
-        //generate
-        //create
-        //push
+    public static void testGenerateFlux() {
+        Flux<String> flux = Flux.generate(
+                () -> 0,
+                (state, sink) -> {
+                    sink.next("3 x " + state + " = " + 3 * state);
+                    if (state == 10) {
+                        sink.complete();
+                    }
+                    return state + 1;
+                });
+        flux.subscribe((s) -> System.out.println(s));
+    }
+
+    /**
+     * 这个方法提供了一种惰性策略，发布者不会一开始发布消息，直到订阅者创建实例
+     */
+    public static void testDefer() {
+
+    }
+
+    /**
+     * 从最新的发布者那里获取事件，如果有新的发布者加入，则改用新的发布者。
+     * 当最后一个发布者完成所有发布事件，并且没有发布者加入，则flux完成。
+     */
+    public static void testSwitchOnNext() {
+
+    }
+
+    /**
+     * 间隔一定的时间，发送事件
+     */
+    public static void testInterval() {
+
     }
 
     /**
@@ -118,6 +157,9 @@ public class FluxDemoApplication {
         });
     }
 
+    /**
+     * 构建一个Flux，混合由多个的发布者发布最新事件.
+     */
     public static void testCombine() {
         Flux<Trade> flux = Flux.fromIterable(Lists.newArrayList(
                 new Trade(1L, 1L, BigDecimal.valueOf(10)),
@@ -138,8 +180,24 @@ public class FluxDemoApplication {
         });
     }
 
+    /**
+     * 混合多个流，和combineLatest类似，但它要求是同类型的流合并，combineLatest需要提供合并方式
+     */
+    public static void testMerge() {
+
+    }
+
+    /**
+     * 通过混合者，合并多个流成一个输出流，一一对应合并
+     */
+    public static void testZip() {
+
+    }
+
+    /**
+     * 流水线拼接
+     */
     public static void testConcat() {
-        //流水线拼接
         Flux<User> flux1 = Flux.fromIterable(Lists.newArrayList(new User(1L, "lisi"), new User(2L, "lisi2")));
         Flux<User> flux2 = Flux.fromIterable(Lists.newArrayList(new User(3L, "lisi"), new User(4L, "lisi2")));
         //见 FluxConcatArray

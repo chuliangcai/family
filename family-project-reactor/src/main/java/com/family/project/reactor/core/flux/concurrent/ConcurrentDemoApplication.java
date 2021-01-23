@@ -1,4 +1,4 @@
-package com.family.project.reactor.flux.concurrent;
+package com.family.project.reactor.core.flux.concurrent;
 
 public class ConcurrentDemoApplication {
 
