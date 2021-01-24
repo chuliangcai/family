@@ -13,31 +13,32 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package com.family.netty;
+package com.family.netty.echo;
 
-import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
  * Handler implementation for the echo server.
  */
 @Sharable
-public class EchoServerHandler implements ChannelHandler {
+public class EchoServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
-    public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
-
-//        ctx.w
+    public void channelRead(ChannelHandlerContext ctx, Object msg) {
+        ctx.write(msg);
     }
 
     @Override
-    public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
-
+    public void channelReadComplete(ChannelHandlerContext ctx) {
+        ctx.flush();
     }
 
     @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
+        // Close the connection when an exception is raised.
+        cause.printStackTrace();
+        ctx.close();
     }
 }
