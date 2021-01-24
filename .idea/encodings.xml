@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/family-guava/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/family-jackson/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/family-jdk/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/family-netty/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/family-project-reactor" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/family-project-reactor/src/main/java" charset="UTF-8" />

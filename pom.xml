@@ -18,6 +18,7 @@
         <module>family-guava</module>
         <module>family-spring-r2dbc</module>
         <module>family-jackson</module>
+        <module>family-jdk</module>
     </modules>
 
 

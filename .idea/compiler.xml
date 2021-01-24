@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="family-jdk" />
         <module name="family-spring-r2dbc" />
         <module name="family-spring-webflux" />
         <module name="family-spring-redis" />
@@ -26,6 +27,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="family-guava" options="-parameters" />
       <module name="family-jackson" options="-parameters" />
+      <module name="family-jdk" options="-parameters" />
       <module name="family-netty" options="-parameters" />
       <module name="family-project-reactor" options="-parameters" />
       <module name="family-spring-devtools" options="-parameters" />
