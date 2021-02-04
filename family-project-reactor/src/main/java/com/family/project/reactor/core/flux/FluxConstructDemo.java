@@ -14,7 +14,7 @@ import lombok.SneakyThrows;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.FluxSink;
 
-public class FluxConstructDemoApplication {
+public class FluxConstructDemo {
 
     private static ObjectMapper objectMapper = new ObjectMapper();
 

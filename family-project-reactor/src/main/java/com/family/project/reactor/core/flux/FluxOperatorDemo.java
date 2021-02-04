@@ -4,7 +4,7 @@ import com.google.common.collect.Lists;
 
 import reactor.core.publisher.Flux;
 
-public class FluxOperatorDemoApplication {
+public class FluxOperatorDemo {
 
     public static void main(String[] args) {
         //testMap();
