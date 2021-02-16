@@ -15,6 +15,7 @@
         <module name="family-netty" />
         <module name="family-guava" />
         <module name="family-jackson" />
+        <module name="family-spring-cloud-vault" />
         <module name="family-project-reactor" />
         <module name="family-spring-devtools" />
       </profile>
@@ -30,6 +31,7 @@
       <module name="family-jdk" options="-parameters" />
       <module name="family-netty" options="-parameters" />
       <module name="family-project-reactor" options="-parameters" />
+      <module name="family-spring-cloud-vault" options="-parameters" />
       <module name="family-spring-devtools" options="-parameters" />
       <module name="family-spring-jpa" options="-parameters" />
       <module name="family-spring-r2dbc" options="-parameters" />

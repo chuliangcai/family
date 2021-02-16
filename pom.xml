@@ -19,6 +19,7 @@
         <module>family-spring-r2dbc</module>
         <module>family-jackson</module>
         <module>family-jdk</module>
+        <module>family-spring-cloud-vault</module>
     </modules>
 
 
