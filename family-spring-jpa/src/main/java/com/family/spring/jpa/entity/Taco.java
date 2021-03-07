@@ -7,6 +7,8 @@ import javax.persistence.PreUpdate;
 
 public class Taco {
 
+    private String name;
+
     private LocalDateTime created;
 
     private LocalDateTime updated;

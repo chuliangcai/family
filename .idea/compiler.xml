@@ -12,6 +12,7 @@
         <module name="family-spring-redis" />
         <module name="family-spring-jpa" />
         <module name="family-netty" />
+        <module name="family-spring-security" />
         <module name="family-spring-webflux" />
         <module name="family-guava" />
         <module name="family-jackson" />
@@ -41,6 +42,7 @@
       <module name="family-spring-jpa" options="-parameters" />
       <module name="family-spring-r2dbc" options="-parameters" />
       <module name="family-spring-redis" options="-parameters" />
+      <module name="family-spring-security" options="-parameters" />
       <module name="family-spring-webflux" options="-parameters" />
       <module name="family-spring-webmvc" options="-parameters" />
       <module name="netty" options="-parameters" />

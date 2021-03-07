@@ -23,6 +23,7 @@
         <module>family-spring-webmvc</module>
         <module>family-lombok</module>
         <module>family-hibernate-validator</module>
+        <module>family-spring-security</module>
     </modules>
 
 
