@@ -3,8 +3,11 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/family-guava/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/family-hibernate-validator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/family-jackson/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/family-jdk/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/family-lombok/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/family-lombok/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/family-netty/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/family-project-reactor" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/family-project-reactor/src/main/java" charset="UTF-8" />
@@ -17,5 +20,6 @@
     <file url="file://$PROJECT_DIR$/family-spring-redis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/family-spring-webflux" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/family-spring-webflux/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/family-spring-webmvc/src/main/java" charset="UTF-8" />
   </component>
 </project>

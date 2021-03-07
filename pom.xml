@@ -20,6 +20,9 @@
         <module>family-jackson</module>
         <module>family-jdk</module>
         <module>family-spring-cloud-vault</module>
+        <module>family-spring-webmvc</module>
+        <module>family-lombok</module>
+        <module>family-hibernate-validator</module>
     </modules>
 
 

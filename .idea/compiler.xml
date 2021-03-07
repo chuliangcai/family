@@ -9,15 +9,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="family-jdk" />
         <module name="family-spring-r2dbc" />
-        <module name="family-spring-webflux" />
         <module name="family-spring-redis" />
         <module name="family-spring-jpa" />
         <module name="family-netty" />
+        <module name="family-spring-webflux" />
         <module name="family-guava" />
         <module name="family-jackson" />
         <module name="family-spring-cloud-vault" />
         <module name="family-project-reactor" />
+        <module name="family-hibernate-validator" />
         <module name="family-spring-devtools" />
+        <module name="family-spring-webmvc" />
+        <module name="family-lombok" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,8 +30,10 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="family-guava" options="-parameters" />
+      <module name="family-hibernate-validator" options="-parameters" />
       <module name="family-jackson" options="-parameters" />
       <module name="family-jdk" options="-parameters" />
+      <module name="family-lombok" options="-parameters" />
       <module name="family-netty" options="-parameters" />
       <module name="family-project-reactor" options="-parameters" />
       <module name="family-spring-cloud-vault" options="-parameters" />
@@ -37,6 +42,7 @@
       <module name="family-spring-r2dbc" options="-parameters" />
       <module name="family-spring-redis" options="-parameters" />
       <module name="family-spring-webflux" options="-parameters" />
+      <module name="family-spring-webmvc" options="-parameters" />
       <module name="netty" options="-parameters" />
     </option>
   </component>
