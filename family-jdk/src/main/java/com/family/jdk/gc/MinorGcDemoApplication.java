@@ -14,7 +14,6 @@ public class MinorGcDemoApplication {
         allocation2 = new byte[2 * _1MB];
         allocation3 = new byte[2 * _1MB];
         // 出现一次Minor GC
-        System.out.println("before gc");
         allocation4 = new byte[4 * _1MB];
     }
 }
