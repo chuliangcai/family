@@ -13,6 +13,7 @@
         <module name="family-spring-jpa" />
         <module name="family-netty" />
         <module name="family-spring-security" />
+        <module name="family-algorithm" />
         <module name="family-spring-webflux" />
         <module name="family-guava" />
         <module name="family-jackson" />
@@ -30,6 +31,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="family-algorithm" options="-parameters" />
       <module name="family-guava" options="-parameters" />
       <module name="family-hibernate-validator" options="-parameters" />
       <module name="family-jackson" options="-parameters" />

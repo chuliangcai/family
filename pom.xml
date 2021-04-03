@@ -24,6 +24,7 @@
         <module>family-lombok</module>
         <module>family-hibernate-validator</module>
         <module>family-spring-security</module>
+        <module>family-algorithm</module>
     </modules>
 
 
