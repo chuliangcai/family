@@ -43,6 +43,7 @@ public class BinarySearchTreeDemo {
             this.data = data;
         }
 
+        //中序遍历
         public void print() {
             if (this.leftChild != null) {
                 this.leftChild.print();

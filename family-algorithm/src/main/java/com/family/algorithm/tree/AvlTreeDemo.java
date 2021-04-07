@@ -1,14 +1,18 @@
 package com.family.algorithm.tree;
 
 public class AvlTreeDemo {
+
     public static void main(String[] args) {
         AvlTree avlTree = new AvlTree();
         avlTree.insert(3);
         avlTree.insert(2);
         avlTree.insert(1);
-        System.out.println("ddd");
     }
 
+    /**
+     * 定义AVL树的节点，和二叉搜索树的区别在于多了一个height属性
+     * 一层的树的高度为1
+     */
     public static class Node {
         private final int data;
         private Node left;
@@ -28,7 +32,7 @@ public class AvlTreeDemo {
             root = insert(root, key);
         }
 
-        private int height(Node node) {
+        private static int height(Node node) {
             if (node == null) {
                 return 0;
             }
@@ -42,7 +46,7 @@ public class AvlTreeDemo {
          * @param key  值
          * @return 新的根节点
          */
-        private Node insert(Node root, int key) {
+        private static Node insert(Node root, int key) {
             if (root == null) {
                 return new Node(key);
             }
@@ -64,11 +68,11 @@ public class AvlTreeDemo {
             return root;
         }
 
-        private void refreshHeight(Node node) {
+        private static void refreshHeight(Node node) {
             node.height = Math.max(height(node.left), height(node.right)) + 1;
         }
 
-        private Node balance(Node node) {
+        private static Node balance(Node node) {
             Node node1, node2;
             // ll
             if (height(node.left) > height(node.right) &&
