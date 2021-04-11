@@ -19,18 +19,17 @@ public class Solution55 {
             //空节点
             return 0;
         }
-        if (root.left == null && root.right == null) {
-            //叶子节点
-            return 1;
-        }
-        return Integer.max(height(root.left), height(root.right));
+        return Integer.max(height(root.left), height(root.right)) + 1;
     }
 
     public boolean isBalanced(TreeNode root) {
         if (root == null) {
             return true;
         }
-        return Math.abs(height(root.left) - height(root.right)) <= 1;
+        if (Math.abs(height(root.left) - height(root.right)) <= 1) {
+            return isBalanced(root.left) && isBalanced(root.right);
+        }
+        return false;
     }
 
     public static void main(String[] args) {
