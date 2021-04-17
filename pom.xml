@@ -25,6 +25,8 @@
         <module>family-hibernate-validator</module>
         <module>family-spring-security</module>
         <module>family-algorithm</module>
+        <module>family-mybatis</module>
+        <module>family-dubbo</module>
     </modules>
 
 
