@@ -3,7 +3,6 @@ package com.family.jdk.concurrent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.function.Consumer;
 
 public class FutureTaskDemoApplication {
 
@@ -16,12 +15,9 @@ public class FutureTaskDemoApplication {
         }).thenApplyAsync(v -> {
             System.out.println(Thread.currentThread().getName() + " thenApplyAsync");
             return v + "world";
-        }).thenAccept(new Consumer<String>() {
-            @Override
-            public void accept(String s) {
-                System.out.println(Thread.currentThread().getName() + " accept");
-                results.add(s);
-            }
+        }).thenAccept(s -> {
+            System.out.println(Thread.currentThread().getName() + " accept");
+            results.add(s);
         });
         System.out.println(results);
 

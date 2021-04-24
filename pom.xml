@@ -27,6 +27,7 @@
         <module>family-algorithm</module>
         <module>family-mybatis</module>
         <module>family-dubbo</module>
+        <module>family-flexmark</module>
     </modules>
 
 
