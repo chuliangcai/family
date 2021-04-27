@@ -28,6 +28,7 @@
         <module>family-mybatis</module>
         <module>family-dubbo</module>
         <module>family-flexmark</module>
+        <module>family-spring-boot</module>
     </modules>
 
 
