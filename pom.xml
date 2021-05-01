@@ -30,6 +30,7 @@
         <module>family-flexmark</module>
         <module>family-spring-boot</module>
         <module>family-spring-mybatis</module>
+        <module>family-tomcat-dbcp</module>
     </modules>
 
 
