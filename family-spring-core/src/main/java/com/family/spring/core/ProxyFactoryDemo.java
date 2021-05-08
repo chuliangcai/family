@@ -1,5 +1,7 @@
 package com.family.spring.core;
 
+import org.aopalliance.intercept.MethodInterceptor;
+import org.aopalliance.intercept.MethodInvocation;
 import org.springframework.aop.framework.ProxyFactory;
 
 public class ProxyFactoryDemo {
@@ -31,7 +33,13 @@ public class ProxyFactoryDemo {
         proxyFactory.setProxyTargetClass(true);
         proxyFactory.setTarget(new Programmer());
         proxyFactory.setInterfaces(Person.class);
+        proxyFactory.addAdvice((MethodInterceptor) invocation -> {
+            System.out.println("before");
+            Object result = invocation.proceed();
+            System.out.println("after");
+            return result;
+        });
         Programmer person = (Programmer) proxyFactory.getProxy();
-        person.eat();
+        person.code();
     }
 }
