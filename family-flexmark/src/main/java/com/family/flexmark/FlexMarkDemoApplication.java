@@ -32,7 +32,7 @@ public class FlexMarkDemoApplication {
 
     public static void main(String[] args) throws Exception {
         //要发表的文章路径
-        String file = "/Users/chuyuancheng/data/projects/blog/app/blog/spring/spring_data_jpa/熟练掌握spring框架第二篇.md";
+        String file = "/Users/chuyuancheng/data/projects/blog/app/blog/java_language/响应式编程/响应式编程实战.md";
         MutableDataSet options = new MutableDataSet();
         Parser parser = Parser.builder(options).build();
         String descFile = DEST_FILE_PARENT_PATH + StringUtils.substringAfterLast(file, "blog");
