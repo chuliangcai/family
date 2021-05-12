@@ -12,12 +12,16 @@ import org.springframework.data.annotation.CreatedDate;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Setter
+@Getter
 public class Coffee {
 
     @Id
@@ -30,4 +34,9 @@ public class Coffee {
 
     @CreatedDate
     private LocalDateTime created;
+
+    public Coffee(String name, BigDecimal price) {
+        this.name = name;
+        this.price = price;
+    }
 }

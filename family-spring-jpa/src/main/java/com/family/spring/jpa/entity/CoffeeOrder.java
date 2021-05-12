@@ -29,6 +29,14 @@ public class CoffeeOrder {
 
     private LocalDateTime payTime;
 
+    private String mobile;
+
     @CreatedDate
     private LocalDateTime created;
+
+    public CoffeeOrder(Long coffeeId, String mobile) {
+        this.coffeeId = coffeeId;
+        this.mobile = mobile;
+        this.payTime = LocalDateTime.now();
+    }
 }
