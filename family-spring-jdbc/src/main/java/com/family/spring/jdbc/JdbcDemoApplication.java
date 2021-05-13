@@ -13,6 +13,7 @@ import com.family.spring.jdbc.domain.repository.CoffeeRepository;
 
 @SpringBootApplication
 public class JdbcDemoApplication implements ApplicationRunner {
+
     @Autowired
     private CoffeeRepository coffeeRepository;
 
@@ -21,7 +22,7 @@ public class JdbcDemoApplication implements ApplicationRunner {
     }
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
         Coffee coffee = new Coffee();
         coffee.setName("拿铁");
         coffee.setPrice(BigDecimal.valueOf(30));
