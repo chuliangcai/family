@@ -32,6 +32,7 @@
         <module>family-spring-mybatis</module>
         <module>family-tomcat-dbcp</module>
         <module>family-spring-core</module>
+        <module>family-spring-jdbc</module>
     </modules>
 
 
