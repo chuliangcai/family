@@ -16,10 +16,8 @@ public class CoffeeOrderService {
 
     @Autowired
     private CoffeeRepository coffeeRepository;
-
     @Autowired
     private CoffeeOrderRepository coffeeOrderRepository;
-
     @Transactional(rollbackFor = RuntimeException.class)
     public void order(String coffeeName, BigDecimal price, String mobile) {
         Coffee coffee = new Coffee(coffeeName, price);
