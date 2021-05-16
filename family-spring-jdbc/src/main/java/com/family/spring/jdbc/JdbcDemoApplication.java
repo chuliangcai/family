@@ -10,9 +10,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.family.spring.jdbc.domain.model.Coffee;
 import com.family.spring.jdbc.domain.repository.CoffeeRepository;
+import com.family.spring.jdbc.domain.service.CoffeeService;
 
 @SpringBootApplication
 public class JdbcDemoApplication implements ApplicationRunner {
+
+    @Autowired
+    private CoffeeService coffeeService;
 
     @Autowired
     private CoffeeRepository coffeeRepository;
@@ -23,9 +27,10 @@ public class JdbcDemoApplication implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) {
-        Coffee coffee = new Coffee();
-        coffee.setName("拿铁");
-        coffee.setPrice(BigDecimal.valueOf(30));
-        coffeeRepository.save(coffee);
+        try {
+            coffeeService.save(new Coffee("拿铁", BigDecimal.valueOf(10)), new Coffee("美式", BigDecimal.valueOf(20)));
+        } catch (Exception e) {
+            System.out.println(coffeeRepository.findAll());
+        }
     }
 }
