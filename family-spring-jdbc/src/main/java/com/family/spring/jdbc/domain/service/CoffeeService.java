@@ -16,9 +16,11 @@ public class CoffeeService {
     @Transactional(rollbackFor = RuntimeException.class)
     public void save(Coffee coffee1, Coffee coffee2) {
         coffeeRepository.save(coffee1);
+        System.out.println("插入第一条完成");
         System.out.println(coffeeRepository.findAll());
         coffeeRepository.save(coffee2);
+        System.out.println("插入第二条完成");
         System.out.println(coffeeRepository.findAll());
-        throw new RuntimeException("挂了");
+//        throw new RuntimeException("挂了");
     }
 }
