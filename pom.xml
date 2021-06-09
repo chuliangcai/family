@@ -33,6 +33,7 @@
         <module>family-tomcat-dbcp</module>
         <module>family-spring-core</module>
         <module>family-spring-jdbc</module>
+        <module>family-spring-cloud-hystrix</module>
     </modules>
 
 
