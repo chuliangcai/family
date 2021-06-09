@@ -13,6 +13,6 @@ public class UserServiceApiImpl implements UserServiceApi {
 
     @Override
     public List<UserDto> findTop20User() {
-        return Lists.newArrayList(new UserDto(), new UserDto());
+        return Lists.newArrayList(new UserDto("dddd"), new UserDto());
     }
 }

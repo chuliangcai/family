@@ -21,5 +21,6 @@ public class ConsumerMain implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         userServiceApi.findTop20User();
+        System.out.println("ssss");
     }
 }

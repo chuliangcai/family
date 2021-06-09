@@ -6,6 +6,13 @@ public class UserDto implements Serializable {
     private String name;
     private int age;
 
+    public UserDto() {
+    }
+
+    public UserDto(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
