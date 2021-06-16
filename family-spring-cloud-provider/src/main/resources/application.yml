@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: service-provider
+server:
+  # 随机端口
+  port: 0
+eureka:
+  client:
+    service-url:
+      # 注册中心地址
+      defaultZone: http://192.168.56.102:8761/eureka/
+
