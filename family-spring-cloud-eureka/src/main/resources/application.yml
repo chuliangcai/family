@@ -4,6 +4,7 @@ eureka:
   server:
     # 禁用自我保护模式
     enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000
   client:
     # 不从其他eureka实例获取注册信息
     fetch-registry: false
