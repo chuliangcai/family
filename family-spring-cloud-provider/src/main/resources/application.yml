@@ -7,6 +7,6 @@ server:
 eureka:
   client:
     service-url:
-      # 注册中心地址
+      # 注册中心地址 如果由多个地址可以用逗号分割
       defaultZone: http://192.168.56.102:8761/eureka/
 
