@@ -36,6 +36,8 @@
         <module>family-spring-cloud-hystrix</module>
         <module>family-alibaba-transmittable-thread-local</module>
         <module>family-spring-cloud-eureka</module>
+        <module>family-spring-cloud-provider</module>
+        <module>family-spring-cloud-consumer</module>
     </modules>
 
 

@@ -1,8 +1,13 @@
 server:
   port: 8761
 eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
   server:
+    # 禁用自我保护模式
     enable-self-preservation: false
+  client:
+    # 不从其他eureka实例获取注册信息
+    fetch-registry: false
+    # 不往其他eureka实例注册自身
+    register-with-eureka: false
+    # 上面两个属性保证了一个单机版本的eureka
+
