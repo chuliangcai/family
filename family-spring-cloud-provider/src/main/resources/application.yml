@@ -12,4 +12,6 @@ eureka:
   instance:
     # 使用ip作为主机名
     prefer-ip-address: true
+    # 使用宿主机ip
+    # ip-address: 192.168.56.102
 
