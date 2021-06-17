@@ -14,4 +14,7 @@ eureka:
     prefer-ip-address: true
     # 使用宿主机ip
     # ip-address: 192.168.56.102
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
+    instance-id: ${spring.application.name}:${random.int[7000,8000]}
 

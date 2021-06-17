@@ -11,6 +11,7 @@ eureka:
       defaultZone: http://192.168.56.102:8761/eureka/
     # 单纯的消费者不往注册中心注册服务
     register-with-eureka: false
+    registry-fetch-interval-seconds: 10
   instance:
     # 使用ip作为主机名
     prefer-ip-address: true
