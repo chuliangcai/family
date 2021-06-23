@@ -38,6 +38,7 @@
         <module>family-spring-cloud-eureka</module>
         <module>family-spring-cloud-provider</module>
         <module>family-spring-cloud-consumer</module>
+        <module>family-redis-redisson</module>
     </modules>
 
 
