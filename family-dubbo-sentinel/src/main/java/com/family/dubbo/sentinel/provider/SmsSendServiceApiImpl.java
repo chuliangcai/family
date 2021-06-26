@@ -1,16 +1,18 @@
 package com.family.dubbo.sentinel.provider;
 
+import java.util.List;
 import java.util.Random;
 
 import org.apache.dubbo.config.annotation.DubboService;
 
-import com.family.dubbo.sentinel.api.HelloServiceApi;
+import com.family.dubbo.sentinel.api.Sms;
+import com.family.dubbo.sentinel.api.SmsSendServiceApi;
 
 @DubboService
-public class HelloServiceApiImpl implements HelloServiceApi {
+public class SmsSendServiceApiImpl implements SmsSendServiceApi {
 
     @Override
-    public String hi() {
+    public void send(List<Sms> smsList) {
         int m = new Random().nextInt(20);
         try {
             System.out.println(200+m);
@@ -18,6 +20,6 @@ public class HelloServiceApiImpl implements HelloServiceApi {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return "hello world";
+        System.out.println("send sms size:" + smsList.size());
     }
 }
