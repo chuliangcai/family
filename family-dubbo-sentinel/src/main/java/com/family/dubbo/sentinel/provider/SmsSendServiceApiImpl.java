@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import org.apache.dubbo.config.annotation.DubboService;
+import org.apache.dubbo.rpc.RpcContext;
 
 import com.family.dubbo.sentinel.api.Sms;
 import com.family.dubbo.sentinel.api.SmsSendServiceApi;
@@ -20,6 +21,7 @@ public class SmsSendServiceApiImpl implements SmsSendServiceApi {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        RpcContext.getContext().setAttachment("index", "1");
         System.out.println("send sms size:" + smsList.size());
     }
 }
