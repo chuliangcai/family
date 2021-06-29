@@ -8,7 +8,7 @@ public class Solution523 {
     public static void main(String[] args) {
         int[] nums = {5,0,0,0};
         boolean a = checkSubarraySum2(nums,3);
-        System.out.println(a );
+        System.out.println(a);
     }
 
     //方法1，最土的办法，时间复杂度不符合要求
