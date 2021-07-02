@@ -20,7 +20,6 @@ public class ConsumerConfiguration {
     @Bean
     public RegistryConfig registryConfig() {
         RegistryConfig registryConfig = new RegistryConfig();
-        //        Hessian2SerializerFactory..setAllowNonSerializable(true);
         registryConfig.setAddress("zookeeper://192.168.56.102:2181");
         return registryConfig;
     }
