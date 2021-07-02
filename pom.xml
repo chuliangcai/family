@@ -41,6 +41,7 @@
         <module>family-redis-redisson</module>
         <module>family-dubbo-sentinel</module>
         <module>family-spring-kafka</module>
+        <module>family-canal</module>
     </modules>
 
 

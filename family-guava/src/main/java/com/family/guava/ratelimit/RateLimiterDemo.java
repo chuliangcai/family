@@ -3,6 +3,7 @@ package com.family.guava.ratelimit;
 import com.google.common.util.concurrent.RateLimiter;
 
 public class RateLimiterDemo {
+
     private static final RateLimiter rateLimiter = RateLimiter.create(1);
 
     public static void main(String[] args) {
@@ -10,18 +11,19 @@ public class RateLimiterDemo {
         System.out.println(rateLimiter.tryAcquire(1));
     }
 
-   public static class MyRateLimiter{
+    public static class MyRateLimiter {
         private int permitsPerSecond;
         private long createTime;
-        public boolean tryAcquire(int n){
+
+        public boolean tryAcquire(int n) {
             // 比如1秒中生产5个，也就是200毫秒生产一个
             // 令牌桶可以理解为一个容量固定的桶, 放多了就没有了
             // 1-200 200-400 400-600 600-800 800-1000 1000-1200
-         //5 // 放1     放1     放1     放1     放1        放1     放1
-             //  +1    +1       +1     +1      +1        +1     +1    +1    +1
+            //5 // 放1     放1     放1     放1     放1        放1     放1
+            //  +1    +1       +1     +1      +1        +1     +1    +1    +1
             // 将每200毫秒消耗2个 那么什么时候用完
             // -2      -2       -2     -2      -2        -2     -2    -2    -2
-        //剩余   4      3        2      1       0         不够    0     不够   0 .....
+            //剩余   4      3        2      1       0         不够    0     不够   0 .....
             return false;
             //任意时刻能否获取令牌实际只需要看桶内还有没有够数的令牌即可
             //那么怎么表示桶理的剩余令牌呢
@@ -40,5 +42,5 @@ public class RateLimiterDemo {
             //然后减去消耗的数量，更新信息。
             //你认为我的算法有问题吗，欢迎指正
         }
-   }
+    }
 }
