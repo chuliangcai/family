@@ -1,6 +1,5 @@
 package com.family.dubbo.consumer;
 
-import org.apache.dubbo.common.serialize.hessian2.Hessian2SerializerFactory;
 import org.apache.dubbo.config.ApplicationConfig;
 import org.apache.dubbo.config.RegistryConfig;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
@@ -10,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableDubbo
 public class ConsumerConfiguration {
+
     @Bean
     public ApplicationConfig applicationConfig() {
         ApplicationConfig applicationConfig = new ApplicationConfig();
