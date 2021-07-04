@@ -13,6 +13,11 @@ public class UserServiceApiImpl implements UserServiceApi {
 
     @Override
     public List<UserDto> findTop20User() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return Lists.newArrayList(new UserDto("dddd"), new UserDto());
     }
 }
