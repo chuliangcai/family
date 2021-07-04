@@ -21,7 +21,6 @@ public class ConsumerConfiguration {
     @Bean
     public ConsumerConfig consumerConfig() {
         ConsumerConfig consumerConfig = new ConsumerConfig();
-        consumerConfig.setTimeout(500);
         return consumerConfig;
     }
 
