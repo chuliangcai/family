@@ -2,7 +2,7 @@ package com.family.dubbo.api;
 
 import java.io.Serializable;
 
-public class UserDto {
+public class UserDto implements Serializable {
     private String name;
     private int age;
 
