@@ -3,6 +3,7 @@ package com.family.dubbo.provider;
 import java.util.List;
 
 import org.apache.dubbo.config.annotation.DubboService;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import com.family.dubbo.api.UserDto;
 import com.family.dubbo.api.UserServiceApi;

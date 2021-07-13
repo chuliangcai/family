@@ -9,6 +9,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ProviderMain {
     public static void main(String[] args) throws Exception {
         SpringApplication.run(ProviderMain.class, args);
-        new CountDownLatch(1).await();
+//        new CountDownLatch(1).await();
     }
 }
