@@ -18,6 +18,7 @@ public class MybatisApplication implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        studentMapper.findByState("");
+        Student student = studentMapper.findById(1L);
+        System.out.println(student);
     }
 }
