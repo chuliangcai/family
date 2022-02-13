@@ -1,7 +1,6 @@
 package com.family.dubbo.consumer;
 
 import org.apache.dubbo.config.ApplicationConfig;
-import org.apache.dubbo.config.ConsumerConfig;
 import org.apache.dubbo.config.RegistryConfig;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.context.annotation.Bean;
@@ -11,18 +10,12 @@ import org.springframework.context.annotation.Configuration;
 @EnableDubbo
 public class ConsumerConfiguration {
 
-    @Bean
+    /*@Bean
     public ApplicationConfig applicationConfig() {
         ApplicationConfig applicationConfig = new ApplicationConfig();
         applicationConfig.setName("dubbo-demo-application-client");
         return applicationConfig;
-    }
-
-    @Bean
-    public ConsumerConfig consumerConfig() {
-        ConsumerConfig consumerConfig = new ConsumerConfig();
-        return consumerConfig;
-    }
+    }*/
 
     @Bean
     public RegistryConfig registryConfig() {

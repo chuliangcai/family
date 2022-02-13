@@ -1,0 +1,4 @@
+package com.family.dubbo.consumer;
+
+public class HouseSamePriceRangeNotifyService extends AbstractLimitationNotifyService implements RentHouseUpShelfListener,ExistingHouseUpShelfListener{
+}
