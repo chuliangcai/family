@@ -42,6 +42,7 @@
         <module>family-dubbo-sentinel</module>
         <module>family-spring-kafka</module>
         <module>family-canal</module>
+        <module>family-spring-boot-mybatis</module>
     </modules>
 
 
