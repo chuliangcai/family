@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>family-spring-mybatis</artifactId>
+    <artifactId>family-spring-boot-mybatis3</artifactId>
 
     <dependencies>
         <dependency>

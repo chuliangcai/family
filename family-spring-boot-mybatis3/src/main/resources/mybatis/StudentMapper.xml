@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.family.spring.mybatis.StudentMapper" >
+    <!--<cache />-->
+    <resultMap id="baseResultMap" type="com.family.spring.mybatis.Student" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="first_name" property="firstName" jdbcType="VARCHAR" />
+        <result column="last_name" property="lastName" jdbcType="VARCHAR" />
+        <result column="age" property="age" jdbcType="INTEGER" />
+        <result column="good_rate" property="goodRate"/>
+        <association property="teacher" javaType="com.family.spring.mybatis.Teacher" resultMap="teacherResultMap"/>
+    </resultMap>
+
+    <resultMap id="teacherResultMap" type="com.family.spring.mybatis.Teacher" >
+        <result column="teacher_name" property="teacherName" jdbcType="VARCHAR" />
+        <result column="teacher_sex" property="teacherSex" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="findAll" resultMap="baseResultMap">
+        select * from student
+    </select>
+</mapper>

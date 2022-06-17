@@ -1,5 +1,7 @@
 package com.family.spring.mybatis;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -18,7 +20,7 @@ public class MybatisApplication implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        Student student = studentMapper.findById(1L);
-        System.out.println(student);
+        List<Student> studentList = studentMapper.findAll();
+        System.out.println(studentList);
     }
 }
