@@ -32,7 +32,7 @@ public class FlexMarkDemoApplication {
 
     public static void main(String[] args) throws Exception {
         //要发表的文章路径
-        String file = "/Users/chuyuancheng/data/projects/blog/app/blog/jvm/编译jdk和使用clion调试jdk博客版.md";
+        String file = "/Users/chuyuancheng/data/projects/blog/app/blog/frontend/javascript/百度去广告.md";
         MutableDataSet options = new MutableDataSet();
         Parser parser = Parser.builder(options).build();
         String descFile = DEST_FILE_PARENT_PATH + StringUtils.substringAfterLast(file, "blog");
@@ -73,7 +73,8 @@ public class FlexMarkDemoApplication {
             if (node1 instanceof Image) {
                 Image image = (Image) node1;
                 String fileName = image.getUrl().toString();
-                image.setPageRef(BasedSequence.of(IMAGE_FILE_URL_PREFIX + "/" + fileName));
+                System.out.println(fileName);
+                image.setPageRef(BasedSequence.of(IMAGE_FILE_URL_PREFIX + "/" + StringUtils.substringAfterLast(fileName, "/")));
             } else {
                 replaceUrl(node1);
             }
